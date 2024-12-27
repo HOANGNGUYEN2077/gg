@@ -1,0 +1,69 @@
+/* Đặt kiểu cho body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Container cho grid sản phẩm */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột sản phẩm */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+/* Ảnh sản phẩm */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hiệu ứng khi hover lên sản phẩm */
+.product-card:hover {
+    transform: translateY(-10px); /* Di chuyển sản phẩm lên trên khi hover */
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    display: none; /* Ẩn thông tin sản phẩm khi không hover */
+}
+
+/* Hiện thông tin sản phẩm khi hover */
+.product-card:hover .product-info {
+    display: block;
+}
+
+/* Tên sản phẩm */
+.product-info h5 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Giá sản phẩm */
+.product-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
